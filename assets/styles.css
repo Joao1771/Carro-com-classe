@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    box-sizing: border-box;
+    background-color: rgb(56, 53, 53);
+}
+section{
+    height: 100vh;
+}
+footer{
+    height: 100px;
+    background-color: aqua;
+    width: 100%;
+}
+.flexbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+.nav-cima{
+    height: 100px;
+    background: red;
+    width: 100%;
+}
+.rua{
+    align-self: center;
+    width: 100%;
+    background-color: black;
+    height: 200px;
+    display: flex;
+}
+.carro{
+    background-color: gray;
+    height: 90px; /* ajustar de acordo com a tela */
+    width: 400px;
+    margin: auto;
+    background-image: url(../assets/imgs/ferrari.jpg);
+    background-size: cover;
+}
+.eixo{
+    margin-top: 60px; /* ajustar de acordo com o carro, height-30px*/
+    display: flex;
+    background-color: transparent;
+    height: 10px;
+}
+.roda{
+    width: 26px;
+    height: 26px;
+    width: 100%;
+}
+.roda img{
+    width: 55px;
+    height: 55px;
+    margin-left: 25%;
+    animation:rodar 1000ms infinite;
+    animation-delay: 0ms;
+}
+.roda:nth-child(2) img{
+    margin-left: 43%;
+}
+@keyframes rodar {
+    from{rotate: 0;}
+    to{rotate:360deg;}
+}
