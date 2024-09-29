@@ -56,7 +56,7 @@ footer{
     width: 55px;
     height: 55px;
     margin-left: 25%;
-    animation:rodar 1000ms infinite;
+    animation:rodar 700ms infinite linear;
     animation-delay: 0ms;
 }
 .roda:nth-child(2) img{
