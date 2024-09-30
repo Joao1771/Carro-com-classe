@@ -29,20 +29,31 @@ footer{
 .rua{
     align-self: center;
     width: 100%;
-    background-color: black;
+    background-color: aqua;
     height: 200px;
     display: flex;
+    z-index: 0;
+}
+.rua::after{
+    content: '';
+    background: black;
+    height: 20px;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    z-index: 2;
 }
 .carro{
-    background-color: gray;
     height: 90px; /* ajustar de acordo com a tela */
-    width: 400px;
+    width: 380px;
     margin: auto;
-    background-image: url(../assets/imgs/ferrari.jpg);
+    background-image: url(../assets/imgs/ferrari.png);
     background-size: cover;
+    background-color: transparent;
+    z-index: 3;
 }
 .eixo{
-    margin-top: 60px; /* ajustar de acordo com o carro, height-30px*/
+    margin-top: 55px; /* ajustar de acordo com o carro, height-30px*/
     display: flex;
     background-color: transparent;
     height: 10px;
@@ -50,7 +61,7 @@ footer{
 .roda{
     width: 26px;
     height: 26px;
-    width: 100%;
+    width: 1900px;
 }
 .roda img{
     width: 55px;
