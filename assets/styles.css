@@ -5,13 +5,14 @@
 html{
     box-sizing: border-box;
     background-color: rgb(56, 53, 53);
+    overflow: hidden;
 }
 section{
     height: 100vh;
 }
 footer{
     height: 100px;
-    background-color: aqua;
+    background-color: rgb(24, 146, 146);
     width: 100%;
 }
 .flexbox{
@@ -23,7 +24,7 @@ footer{
 }
 .nav-cima{
     height: 100px;
-    background: red;
+    background: rgb(165, 26, 26);
     width: 100%;
 }
 .rua{
@@ -32,26 +33,31 @@ footer{
     background-color: aqua;
     height: 200px;
     display: flex;
-    z-index: 0;
+    flex-direction: column;
+    background-image: url(../assets/imgs/ceu.png);
+    background-position: 0;
+    background-repeat:repeat;
+    animation: velocidade 8000ms infinite linear;
 }
-.rua::after{
-    content: '';
+.rua .piso{
     background: black;
-    height: 20px;
+    height: 15px;
     width: 100%;
     position: relative;
-    top: 0px;
+    bottom: 0px;
     z-index: 2;
 }
+
 .carro{
     height: 90px; /* ajustar de acordo com a tela */
     width: 380px;
-    margin: auto;
+    margin:auto auto 19px auto;
     background-image: url(../assets/imgs/ferrari.png);
     background-size: cover;
     background-color: transparent;
     z-index: 3;
 }
+
 .eixo{
     margin-top: 55px; /* ajustar de acordo com o carro, height-30px*/
     display: flex;
@@ -64,6 +70,7 @@ footer{
     width: 1900px;
 }
 .roda img{
+    user-select: none;
     width: 55px;
     height: 55px;
     margin-left: 25%;
@@ -73,7 +80,42 @@ footer{
 .roda:nth-child(2) img{
     margin-left: 43%;
 }
+.flexbox{
+    display: flex;
+}
+.arvore{
+    height: 180px;
+    width: 120px;
+    position: relative;
+    display: inline-block;
+    top: -180px;
+    left: 90px;
+    animation: fundo 3000ms infinite linear;
+}
+.arvore:nth-child(2){
+    animation-delay: 1200ms;
+    left: 300%;
+}
+.arvore .copa{
+    background: green;
+    height:50%;
+    border-radius: 20px;
+}
+.arvore .tronco{
+    height: 50%;
+    background: brown;
+    width: 20%;
+    margin: 0 auto;
+}
 @keyframes rodar {
     from{rotate: 0;}
     to{rotate:360deg;}
+} 
+@keyframes velocidade {
+    from{background-position: 2050px;}
+    to{background-position: -1050px;}
+}
+@keyframes fundo {
+    from{left:102%}
+    to{left:-20%;}
 }
