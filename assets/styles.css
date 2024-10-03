@@ -37,7 +37,7 @@ footer{
     background-image: url(../assets/imgs/ceu.png);
     background-position: 0;
     background-repeat:repeat;
-    animation: velocidade 8000ms infinite linear;
+    animation: velocidade 12000ms infinite linear;
 }
 .rua .piso{
     background: black;
@@ -74,7 +74,7 @@ footer{
     width: 55px;
     height: 55px;
     margin-left: 25%;
-    animation:rodar 700ms infinite linear;
+    animation:rodar 1200ms infinite linear;
     animation-delay: 0ms;
 }
 .roda:nth-child(2) img{
@@ -83,18 +83,18 @@ footer{
 .flexbox{
     display: flex;
 }
+.cenario{
+    position: relative;
+    top: -180px;
+    width: 100%;
+    max-height: 200px;
+    display: flex;
+    gap: 100px;
+    /* animation: fundo 7000ms infinite linear; */
+}
 .arvore{
     height: 180px;
     width: 120px;
-    position: relative;
-    display: inline-block;
-    top: -180px;
-    left: 90px;
-    animation: fundo 3000ms infinite linear;
-}
-.arvore:nth-child(2){
-    animation-delay: 1200ms;
-    left: 300%;
 }
 .arvore .copa{
     background: green;
@@ -107,6 +107,12 @@ footer{
     width: 20%;
     margin: 0 auto;
 }
+.pedra{
+    height: 50px;
+    background: gray;
+    width: 30px;
+    margin-top: 11%;
+}
 @keyframes rodar {
     from{rotate: 0;}
     to{rotate:360deg;}
@@ -116,6 +122,6 @@ footer{
     to{background-position: -1050px;}
 }
 @keyframes fundo {
-    from{left:102%}
-    to{left:-20%;}
+    from{left:200%}
+    to{left:-100%;}
 }
