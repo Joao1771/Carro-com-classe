@@ -37,7 +37,7 @@ footer{
     background-image: url(../assets/imgs/ceu.png);
     background-position: 0;
     background-repeat:repeat;
-    animation: velocidade 12000ms infinite linear;
+    animation: ceu 12000ms infinite linear;
 }
 .rua .piso{
     background: black;
@@ -83,14 +83,15 @@ footer{
 .flexbox{
     display: flex;
 }
+/* Cenário que contem tudo do fundo: arvores, pedras e a cerca*/
 .cenario{
     position: relative;
     top: -180px;
-    width: 100%;
+    width: fit-content;
     max-height: 200px;
     display: flex;
-    gap: 100px;
-    /* animation: fundo 7000ms infinite linear; */
+    gap: 10vw;
+    animation: cenario 6000ms infinite linear;
 }
 .arvore{
     height: 180px;
@@ -110,18 +111,50 @@ footer{
 .pedra{
     height: 50px;
     background: gray;
-    width: 30px;
-    margin-top: 11%;
+    width: 50px;
+    z-index: -1;
+    margin-top: auto;
+    border-radius: 12px 30px 5px 0;
 }
+.cerca {
+    width: 420px;
+    height: 70px;
+    margin-top: auto;
+}
+.cerca .estaca{
+    background: burlywood;
+    display: inline-block;
+    height: 70px;
+    width: 20px;
+}
+.estaca .ponta-estaca{
+    border-bottom: 25px  solid burlywood;
+    border-left: 10px  solid transparent;
+    border-right: 10px  solid transparent;
+    margin-top: -25px;
+}
+.cerca .madeira-atravessada{
+    margin: 0 -4px;
+    display: inline-block;
+    height: 70px;
+    width: 50px;
+}
+.cerca .madeira-atravessada .m1, .m2{
+    background: burlywood;
+    height: 23%;
+    margin: 15px 0;
+}
+
 @keyframes rodar {
     from{rotate: 0;}
     to{rotate:360deg;}
 } 
-@keyframes velocidade {
-    from{background-position: 2050px;}
-    to{background-position: -1050px;}
+@keyframes ceu {
+    from{background-position: 2247px;}
+    to{background-position: -1498px;}
 }
-@keyframes fundo {
-    from{left:200%}
-    to{left:-100%;}
+/* o que faz o cenario se movimentar (ajustar de acordo com o width)*/
+@keyframes cenario {
+    from{left:130%}
+    to{left:-130%;}
 }
