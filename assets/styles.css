@@ -6,6 +6,7 @@ html{
     box-sizing: border-box;
     background-color: rgb(56, 53, 53);
     overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
 section{
     height: 100vh;
@@ -14,6 +15,16 @@ footer{
     height: 100px;
     background-color: rgb(24, 146, 146);
     width: 100%;
+}
+h1{
+    font-family: Arial;
+    font-size: 50px;
+    font-family: Qwitcher;
+    color: rgb(241, 230, 230)
+}
+@font-face {
+    font-family: Qwitcher;
+    src: url(./fonts/QwitcherGrypen-Bold.ttf);
 }
 .flexbox{
     display: flex;
@@ -26,6 +37,9 @@ footer{
     height: 100px;
     background: rgb(165, 26, 26);
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .rua{
     align-self: center;
@@ -37,7 +51,7 @@ footer{
     background-image: url(../assets/imgs/ceu.png);
     background-position: 0;
     background-repeat:repeat;
-    animation: ceu 12000ms infinite linear;
+    animation: ceu 30200ms infinite linear;
 }
 .rua .piso{
     background: black;
@@ -74,7 +88,7 @@ footer{
     width: 55px;
     height: 55px;
     margin-left: 25%;
-    animation:rodar 1200ms infinite linear;
+    animation:rodar 4820ms infinite linear;
     animation-delay: 0ms;
 }
 .roda:nth-child(2) img{
@@ -91,7 +105,7 @@ footer{
     max-height: 200px;
     display: flex;
     gap: 10vw;
-    animation: cenario 6000ms infinite linear;
+    animation: cenario 25100ms infinite linear;
 }
 .arvore{
     height: 180px;
@@ -146,15 +160,15 @@ footer{
 }
 
 @keyframes rodar {
-    from{rotate: 0;}
+    from{rotate: 0deg;}
     to{rotate:360deg;}
 } 
 @keyframes ceu {
     from{background-position: 2247px;}
     to{background-position: -1498px;}
 }
-/* o que faz o cenario se movimentar (ajustar de acordo com o width)*/
+/* o que faz o cenario se movimentar*/
 @keyframes cenario {
-    from{left:130%}
-    to{left:-130%;}
+    from{left:100vw}
+    to{left:-150vw}
 }
