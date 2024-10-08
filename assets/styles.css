@@ -15,16 +15,46 @@ footer{
     height: 100px;
     background-color: rgb(24, 146, 146);
     width: 100%;
+    display: flex;
+    gap: 300px;
 }
 h1{
     font-family: Arial;
-    font-size: 50px;
+    font-size: 60px;
     font-family: Qwitcher;
     color: rgb(241, 230, 230)
 }
 @font-face {
     font-family: Qwitcher;
     src: url(./fonts/QwitcherGrypen-Bold.ttf);
+}
+.vel-show{
+    height: 100%;
+    width: 15%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.vel-show .velocimetro{
+    height: 100%;
+    width: 100px;
+    background-color: gray;
+    background-image: url(/assets/imgs/velocimetro.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.vel-show div .ponteiro{
+    margin: 0 auto;
+    height: 100%;
+    width: 2px;
+    border-radius: 200px 0 0 0;
+    margin-top:10px ;
+    rotate: 250deg;
+}
+.botoes{
+    height: 100%;
+    width: 70%;
 }
 .flexbox{
     display: flex;
