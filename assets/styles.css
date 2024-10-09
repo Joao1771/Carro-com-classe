@@ -1,0 +1,174 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    box-sizing: border-box;
+    background-color: rgb(56, 53, 53);
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section{
+    height: 100vh;
+}
+footer{
+    height: 100px;
+    background-color: rgb(24, 146, 146);
+    width: 100%;
+}
+h1{
+    font-family: Arial;
+    font-size: 50px;
+    font-family: Qwitcher;
+    color: rgb(241, 230, 230)
+}
+@font-face {
+    font-family: Qwitcher;
+    src: url(./fonts/QwitcherGrypen-Bold.ttf);
+}
+.flexbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+.nav-cima{
+    height: 100px;
+    background: rgb(165, 26, 26);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rua{
+    align-self: center;
+    width: 100%;
+    background-color: aqua;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../assets/imgs/ceu.png);
+    background-position: 0;
+    background-repeat:repeat;
+    animation: ceu 30200ms infinite linear;
+}
+.rua .piso{
+    background: black;
+    height: 15px;
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+    z-index: 2;
+}
+
+.carro{
+    height: 90px; /* ajustar de acordo com a tela */
+    width: 380px;
+    margin:auto auto 19px auto;
+    background-image: url(../assets/imgs/ferrari.png);
+    background-size: cover;
+    background-color: transparent;
+    z-index: 3;
+}
+
+.eixo{
+    margin-top: 55px; /* ajustar de acordo com o carro, height-30px*/
+    display: flex;
+    background-color: transparent;
+    height: 10px;
+}
+.roda{
+    width: 26px;
+    height: 26px;
+    width: 1900px;
+}
+.roda img{
+    user-select: none;
+    width: 55px;
+    height: 55px;
+    margin-left: 25%;
+    animation:rodar 4820ms infinite linear;
+    animation-delay: 0ms;
+}
+.roda:nth-child(2) img{
+    margin-left: 43%;
+}
+.flexbox{
+    display: flex;
+}
+/* Cenário que contem tudo do fundo: arvores, pedras e a cerca*/
+.cenario{
+    position: relative;
+    top: -180px;
+    width: fit-content;
+    max-height: 200px;
+    display: flex;
+    gap: 10vw;
+    animation: cenario 25100ms infinite linear;
+}
+.arvore{
+    height: 180px;
+    width: 120px;
+}
+.arvore .copa{
+    background: green;
+    height:50%;
+    border-radius: 20px;
+}
+.arvore .tronco{
+    height: 50%;
+    background: brown;
+    width: 20%;
+    margin: 0 auto;
+}
+.pedra{
+    height: 50px;
+    background: gray;
+    width: 50px;
+    z-index: -1;
+    margin-top: auto;
+    border-radius: 12px 30px 5px 0;
+}
+.cerca {
+    width: 420px;
+    height: 70px;
+    margin-top: auto;
+}
+.cerca .estaca{
+    background: burlywood;
+    display: inline-block;
+    height: 70px;
+    width: 20px;
+}
+.estaca .ponta-estaca{
+    border-bottom: 25px  solid burlywood;
+    border-left: 10px  solid transparent;
+    border-right: 10px  solid transparent;
+    margin-top: -25px;
+}
+.cerca .madeira-atravessada{
+    margin: 0 -4px;
+    display: inline-block;
+    height: 70px;
+    width: 50px;
+}
+.cerca .madeira-atravessada .m1, .m2{
+    background: burlywood;
+    height: 23%;
+    margin: 15px 0;
+}
+
+@keyframes rodar {
+    from{rotate: 0deg;}
+    to{rotate:360deg;}
+} 
+@keyframes ceu {
+    from{background-position: 2247px;}
+    to{background-position: -1498px;}
+}
+/* o que faz o cenario se movimentar*/
+@keyframes cenario {
+    from{left:100vw}
+    to{left:-150vw}
+}
