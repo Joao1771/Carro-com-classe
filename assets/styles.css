@@ -15,7 +15,6 @@ footer{
     height: 100px;
     background-color: rgb(24, 146, 146);
     width: 100%;
-    display: flex;
     gap: 300px;
 }
 h1{
@@ -28,12 +27,15 @@ h1{
     font-family: Qwitcher;
     src: url(./fonts/QwitcherGrypen-Bold.ttf);
 }
+.flexbox{
+    display: flex;
+}
 .vel-show{
     height: 100%;
-    width: 15%;
+    min-width: 15%;
     text-align: center;
-    display: flex;
     align-items: center;
+    font-size: 20px;
 }
 .vel-show .velocimetro{
     height: 100%;
@@ -49,14 +51,28 @@ h1{
     height: 100%;
     width: 2px;
     border-radius: 200px 0 0 0;
-    margin-top:10px ;
-    rotate: 250deg;
+    margin-top:10px;
+    rotate: 248deg;
 }
 .botoes{
     height: 100%;
     width: 70%;
+    gap: 50px;
+    justify-content: center;
 }
-.flexbox{
+.botoes *{
+    width: 100px;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.botoes button:hover{
+    filter: sepia(50%);
+}
+.botoes .acelerador{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpjqgqiR-fpm87L_eQSpoM-i-ZHRBMGQy1ug&s);
+}
+.flexdiv{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -67,7 +83,6 @@ h1{
     height: 100px;
     background: rgb(165, 26, 26);
     width: 100%;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -76,7 +91,6 @@ h1{
     width: 100%;
     background-color: aqua;
     height: 200px;
-    display: flex;
     flex-direction: column;
     background-image: url(../assets/imgs/ceu.png);
     background-position: 0;
@@ -104,7 +118,6 @@ h1{
 
 .eixo{
     margin-top: 55px; /* ajustar de acordo com o carro, height-30px*/
-    display: flex;
     background-color: transparent;
     height: 10px;
 }
@@ -124,16 +137,12 @@ h1{
 .roda:nth-child(2) img{
     margin-left: 43%;
 }
-.flexbox{
-    display: flex;
-}
 /* Cenário que contem tudo do fundo: arvores, pedras e a cerca*/
 .cenario{
     position: relative;
     top: -180px;
     width: fit-content;
     max-height: 200px;
-    display: flex;
     gap: 10vw;
     animation: cenario 25100ms infinite linear;
 }

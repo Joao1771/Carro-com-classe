@@ -10,63 +10,98 @@
 
 <body>
     <section>
-        <div class="flexbox">
-            <nav class="nav-cima">
+        <div class="flexdiv">
+            <nav class="nav-cima flexbox">
                 <h1>Carro de classe</h1>
             </nav>
-            <div class="rua">
+            <div class="rua flexbox">
                 <div class="carro">
-                    <div class="eixo">
+                    <div class="eixo flexbox">
                         <div class="roda"><img src="assets/imgs/roda.png"></div>
                         <div class="roda"><img src="assets/imgs/roda.png"></div>
                     </div>
                 </div>
                 <div class="piso">
-                    <div class="cenario">
-                    <div class="arvore">
-                    <div class="copa"></div>
-                    <div class="tronco"></div>
-                </div>
-                    <div class="arvore">
-                        <div class="copa"></div>
-                        <div class="tronco"></div>
+                    <div class="cenario flexbox">
+                        <div class="arvore">
+                            <div class="copa"></div>
+                            <div class="tronco"></div>
+                        </div>
+                        <div class="arvore">
+                            <div class="copa"></div>
+                            <div class="tronco"></div>
+                        </div>
+                        <div class="pedra"></div>
+                        <div class="arvore">
+                            <div class="copa"></div>
+                            <div class="tronco"></div>
+                        </div>
+                        <div class="pedra"></div>
+                        <div class="cerca">
+                            <div class="estaca">
+                                <div class="ponta-estaca"></div>
+                            </div>
+                            <div class="madeira-atravessada">
+                                <div class="m1"></div>
+                                <div class="m2"></div>
+                            </div>
+                            <div class="estaca">
+                                <div class="ponta-estaca"></div>
+                            </div>
+                            <div class="madeira-atravessada">
+                                <div class="m1"></div>
+                                <div class="m2"></div>
+                            </div>
+                            <div class="estaca">
+                                <div class="ponta-estaca"></div>
+                            </div>
+                            <div class="madeira-atravessada">
+                                <div class="m1"></div>
+                                <div class="m2"></div>
+                            </div>
+                            <div class="estaca">
+                                <div class="ponta-estaca"></div>
+                            </div>
+                            <div class="madeira-atravessada">
+                                <div class="m1"></div>
+                                <div class="m2"></div>
+                            </div>
+                            <div class="estaca">
+                                <div class="ponta-estaca"></div>
+                            </div>
+                            <div class="madeira-atravessada">
+                                <div class="m1"></div>
+                                <div class="m2"></div>
+                            </div>
+                            <div class="estaca">
+                                <div class="ponta-estaca"></div>
+                            </div>
+                        </div>
+                        <div class="pedra"></div>
                     </div>
-                    <div class="pedra"></div>
-                    <div class="arvore">
-                        <div class="copa"></div>
-                        <div class="tronco"></div>
-                    </div>
-                    <div class="pedra"></div>
-                    <div class="cerca">
-                        <div class="estaca"><div class="ponta-estaca"></div></div>
-                        <div class="madeira-atravessada"><div class="m1"></div><div class="m2"></div></div>
-                        <div class="estaca"><div class="ponta-estaca"></div></div>
-                        <div class="madeira-atravessada"><div class="m1"></div><div class="m2"></div></div>
-                        <div class="estaca"><div class="ponta-estaca"></div></div>
-                        <div class="madeira-atravessada"><div class="m1"></div><div class="m2"></div></div>
-                        <div class="estaca"><div class="ponta-estaca"></div></div>
-                        <div class="madeira-atravessada"><div class="m1"></div><div class="m2"></div></div>
-                        <div class="estaca"><div class="ponta-estaca"></div></div>
-                        <div class="madeira-atravessada"><div class="m1"></div><div class="m2"></div></div>
-                        <div class="estaca"><div class="ponta-estaca"></div></div>
-                    </div>
-                    <div class="pedra"></div>
-                </div>
                 </div>
             </div>
-            <footer>
-                <div class="vel-show">
+            <footer class="flexbox">
+                <div class="vel-show flexbox">
                     <div class="velocimetro">
-                        <div class="ponteiro"><div style="height: 60%; background: red;"></div></div>
+                        <div class="ponteiro">
+                            <div style="height: 60%; background: red;"></div>
+                        </div>
                     </div>
                     <p>1 Km/h</p>
                 </div>
-                <div class="botoes">hey</div>
+                <div class="botoes flexbox">
+                    <button style="display: none;"></button>
+                    <button class="freio-mao" title="pressione espaço"></button>
+                    <button class="freio" title="pressione W, D, ↓ ou ←"></button>
+                    <button class="acelerador" title="pressione W, D, ↑ ou →"></button>
+                </div>
             </footer>
         </div>
     </section>
     <script src="./assets/script.js"></script>
 </body>
+
 </html>
 
 <!--
