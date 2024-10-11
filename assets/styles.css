@@ -15,10 +15,11 @@ footer{
     height: 100px;
     background-color: rgb(24, 146, 146);
     width: 100%;
+    gap: 50%;
 }
 h1{
     font-family: Arial;
-    font-size: 50px;
+    font-size: 60px;
     font-family: Qwitcher;
     color: rgb(241, 230, 230)
 }
@@ -27,6 +28,92 @@ h1{
     src: url(./fonts/QwitcherGrypen-Bold.ttf);
 }
 .flexbox{
+    display: flex;
+}
+.vel-show{
+    height: 100%;
+    min-width: 15%;
+    text-align: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+}
+.vel-show .velocimetro{
+    height: 100%;
+    width: 100px;
+    background-color: gray;
+    background-image: url(/assets/imgs/velocimetro.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.vel-show div .ponteiro{
+    margin: 0 auto;
+    height: 100%;
+    width: 2px;
+    border-radius: 200px 0 0 0;
+    margin-top:10px;
+    rotate: 248deg;
+}
+.botoes{
+    height: 100%;
+    width: 70%;
+    gap: 30px;
+    padding-right: 15px;
+    justify-content: flex-end;
+}
+.botoes *{
+    width: 100px;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.botoes button:hover{
+    /* filter: sepia(50%); */
+    filter: brightness(150%);
+}
+.botoes .acelerador{
+    height: 80px;
+    width: 40px;
+    margin: auto 0;
+    background: rgb(68, 68, 68);
+}
+.botoes .freio{
+    height: 40px;
+    width: 60px;
+    margin: auto 0;
+    background: rgb(68, 68, 68);
+}
+.botoes .freio-mao{
+    margin-right: 60px;
+    height: 100px;
+    width: 120px;
+    background: none;
+    border: none;
+    margin-bottom: 0;
+}
+.botoes .freio-mao div:nth-child(1){
+    height: 65%;
+    background-color: rgb(189, 189, 189);
+    width: 10px;
+    rotate: 290deg;
+    border-radius: 2px 2px 0 0;
+    margin: 0 auto;
+    top: 30px;
+    position: relative;
+    z-index: 1;
+    transition: ease-in-out 300ms;
+}
+.botoes .freio-mao div:nth-child(2){
+    height: 20%;
+    margin: 0 auto 15px auto;
+    width: 70%;
+    background-color: rgb(73, 72, 72);
+    border-radius: 40px 40px 0 0;
+    position: relative;
+    z-index: 2;
+}
+.flexdiv{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -37,7 +124,6 @@ h1{
     height: 100px;
     background: rgb(165, 26, 26);
     width: 100%;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -46,7 +132,6 @@ h1{
     width: 100%;
     background-color: aqua;
     height: 200px;
-    display: flex;
     flex-direction: column;
     background-image: url(../assets/imgs/ceu.png);
     background-position: 0;
@@ -74,7 +159,6 @@ h1{
 
 .eixo{
     margin-top: 55px; /* ajustar de acordo com o carro, height-30px*/
-    display: flex;
     background-color: transparent;
     height: 10px;
 }
@@ -94,16 +178,12 @@ h1{
 .roda:nth-child(2) img{
     margin-left: 43%;
 }
-.flexbox{
-    display: flex;
-}
 /* Cenário que contem tudo do fundo: arvores, pedras e a cerca*/
 .cenario{
     position: relative;
     top: -180px;
     width: fit-content;
     max-height: 200px;
-    display: flex;
     gap: 10vw;
     animation: cenario 25100ms infinite linear;
 }
