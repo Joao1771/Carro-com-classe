@@ -94,7 +94,7 @@ h1{
 }
 .botoes .freio-mao div:nth-child(1){
     height: 65%;
-    background-color: gray;
+    background-color: rgb(189, 189, 189);
     width: 10px;
     rotate: 290deg;
     border-radius: 2px 2px 0 0;
