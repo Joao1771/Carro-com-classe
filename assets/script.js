@@ -8,6 +8,7 @@ class Carro {
         this.p = document.querySelector('.vel-show').querySelector('p')
     }
     /* Essas 3 funções vão alterar o valor de v (velocidade)*/
+    //aumenta v em 1
     acelerar() {
         if (this.fDeMão === true || this.v > 169) return
         this.v++
@@ -15,6 +16,7 @@ class Carro {
         this.p.style.color = 'blue'
         setInterval(()=>{this.p.style.color = 'black'} , 1000)
     }
+    // diminui v em 1
     frear() {
         if (this.v <= 0) return
         this.v--
@@ -22,6 +24,7 @@ class Carro {
         this.p.style.color = 'red'
         setInterval(()=>{this.p.style.color = 'black'} , 1000)
     }
+    // seta v para 0
     brecar() {
         if(this.fDeMão) this.fDeMão = false
         else this.fDeMão = true
@@ -58,13 +61,13 @@ class Carro {
         this.euShowSpeed()
         this.puxado()
     }
-    // controla o velocimetro e seu ponteiro (muito bom)
+    // controla o velocimetro e seu ponteiro
     euShowSpeed(){
         const ponteiro = document.querySelector('.ponteiro')
         ponteiro.style.rotate = 248 + this.v + 'deg'
         this.p.innerText = this.v + 'Km/h'
     }
-    // mostra se o freio de mão está puxado ou não
+    // mostra se o freio de mão está puxado ou não so pra estetica
     puxado(){
         const pn = document.querySelector('.freio-mao').querySelectorAll('div')[0]
         if(this.fDeMão){
@@ -82,18 +85,16 @@ class Carro {
     Basicamente, ele continua a redução das velocidades anteriores, por isso deve-se tirar de v
     as contas anteriores (40km/h e 70km/h = 110) e usar o resto para reduzir os ms (dificil de entender).
     Se não tivesse as contas anteriores, ele apenas subtrairia usando a conta atual e daria um resultado maior.
-    (Com certeza tem uma forma mais simples de fazer esse "degradê" de velocidades, porém esse não é meu foco.)
+    (Com certeza tem uma forma mais simples de fazer esse "degradê" de velocidades, como usando alguma constante, porém esse não é meu foco.)
     */
     msvalue(inicial = 0, roda = false) {
-        console.log(inicial - 40 * 400 - 70 * 150 - (this.v - 110) * 35)
         if (this.v === 0) return '0ms'
         if(roda) return `${inicial - this.v * 30}ms`
         if (40 * 400 - 50 * 150 - (this.v - 90) * 50 >= inicial - 1000) return '100ms'
         if(this.v <= 40) return `${inicial - this.v * 400}ms`
         else if(this.v <= 90) return `${inicial - 40 * 400 - (this.v - 40) * 150}ms`
         return `${inicial - 40 * 400 - 50 * 150 - (this.v - 90) * 35}ms`
-        // q vergonha desse código f***do ^^^^
     }
 }
-const c = new Carro(1)
-c.velocidade()
+const carro = new Carro(1) // (1) = v
+carro.velocidade()
