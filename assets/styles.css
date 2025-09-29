@@ -69,7 +69,6 @@ h1{
     border-radius: 10px;
 }
 .botoes button:hover{
-    /* filter: sepia(50%); */
     filter: brightness(150%);
 }
 .botoes .acelerador{
@@ -238,11 +237,12 @@ h1{
     height: 23%;
     margin: 15px 0;
 }
-
+/* o que faz a roda do carro girar*/
 @keyframes rodar {
     from{rotate: 0deg;}
     to{rotate:360deg;}
 } 
+/* o ceu se move diferente do cenario, "parallax"*/
 @keyframes ceu {
     from{background-position: 2247px;}
     to{background-position: -1498px;}
